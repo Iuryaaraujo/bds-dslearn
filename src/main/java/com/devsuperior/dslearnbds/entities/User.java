@@ -33,7 +33,8 @@ public class User {
 		joinColumns = @JoinColumn(name = "user_id"),
 		inverseJoinColumns = @JoinColumn(name = "role_id"))	
 	private Set<Role> roles = new HashSet<>();
-	
+
+	// usuário tem muitas notificações
 	@OneToMany(mappedBy = "user")
 	private List<Notification> notifications = new ArrayList<>();
 	
